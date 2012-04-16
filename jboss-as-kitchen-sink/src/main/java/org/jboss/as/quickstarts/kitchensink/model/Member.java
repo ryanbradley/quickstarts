@@ -11,7 +11,8 @@ import javax.persistence.UniqueConstraint;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class Member implements Serializable {
+public class Member implements Serializable
+{
    /** Default value included to remove warning. Remove or modify at will. **/
    private static final long serialVersionUID = 1L;
 
