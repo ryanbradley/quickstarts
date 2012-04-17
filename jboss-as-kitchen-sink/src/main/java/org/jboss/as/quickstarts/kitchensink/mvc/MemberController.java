@@ -29,7 +29,7 @@ public class MemberController
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
     public String viewMember(@PathVariable("id") Long id, Model model)
     {
-        model.addAttribute("member", memberDao.getMember(id));
+        model.addAttribute("member", memberDao.findById(id));
         return "viewMember";
     }
 }
