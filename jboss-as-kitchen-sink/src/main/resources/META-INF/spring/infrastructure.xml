@@ -11,8 +11,12 @@
 		   http://www.springframework.org/schema/jee 
 		   http://www.springframework.org/schema/jee/spring-jee.xsd">
 
-    <jee:jndi-lookup jndi-name="java:comp/env/persistence/jboss-as-kitchensink/entityManager" id="entityManager"
-                     expected-type="javax.persistence.EntityManager" />
+    <jee:jndi-lookup jndi-name="java:jboss/kitchensink/persistence" id="entityManagerFactory"
+                     expected-type="javax.persistence.EntityManagerFactory" />
+
+	<bean id="entityManager" class="org.springframework.orm.jpa.support.SharedEntityManagerBean">
+   		<property name="entityManagerFactory" ref="entityManagerFactory"/>
+	</bean>
                      
 	<jee:jndi-lookup jndi-name="java:jboss/datasources/KitchensinkQuickstartDS" id="dataSource" expected-type="javax.sql.DataSource"/>
 
