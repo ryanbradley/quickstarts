@@ -65,6 +65,11 @@
     <!-- Import the necessary Spring Framework dependencies -->
 
 	<dependency>
+	  <groupId>javax.validation</groupId>
+	  <artifactId>validation-api</artifactId>
+	  <version>1.0.0.GA</version>
+	</dependency>
+	<dependency>
 	  <groupId>org.springframework</groupId>
 	  <artifactId>spring-asm</artifactId>
 	  <version>${spring.framework.version}</version>
@@ -92,6 +97,11 @@
 	<dependency>
 	  <groupId>org.springframework</groupId>
 	  <artifactId>spring-expression</artifactId>
+	  <version>${spring.framework.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-orm</artifactId>
 	  <version>${spring.framework.version}</version>
 	</dependency>
 	<dependency>
